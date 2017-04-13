@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
+    version="2.0">
+    <!-- 注意与web.xml里面的JAX-WS配置的url-pattern一致 -->
+    <endpoint name="IJaxWS"
+        implementation="com.qiutt.webservice.jaxws.server.JaxWSImpl"
+        url-pattern="/services/IJaxWS" />
+</endpoints>

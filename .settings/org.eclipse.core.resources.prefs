@@ -1,5 +1,9 @@
 eclipse.preferences.version=1
 encoding//WebContent/WEB-INF/pages/helloWorld.jsp=UTF-8
 encoding//src/main/java=UTF-8
+encoding//src/main/java/com/qiutt/webservice/jaxws/client/eclipsewebserviceclient/IJaxWS.java=UTF-8
+encoding//src/main/java/com/qiutt/webservice/jaxws/client/eclipsewebserviceclient/JaxWSImplPortBindingStub.java=UTF-8
+encoding//src/main/java/com/qiutt/webservice/jaxws/client/eclipsewebserviceclient/JaxWSImplService.java=UTF-8
+encoding//src/main/java/com/qiutt/webservice/jaxws/client/eclipsewebserviceclient/JaxWSImplServiceLocator.java=UTF-8
 encoding//src/test/java=UTF-8
 encoding/<project>=UTF-8

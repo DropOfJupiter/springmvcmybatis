@@ -9,6 +9,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+    
 	<!--配置springmvc的前端控制器 -->
 	<servlet>
 		<servlet-name>springmvcmybatis</servlet-name>
@@ -45,4 +46,21 @@
     <session-config>
         <session-timeout>60</session-timeout>
     </session-config>
+    <!-- 添加JAX-WS发布至Web容器 begin -->
+    <listener>  
+        <listener-class>
+            com.sun.xml.ws.transport.http.servlet.WSServletContextListener  
+        </listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>IJaxWS</servlet-name>  
+        <servlet-class>
+            com.sun.xml.ws.transport.http.servlet.WSServlet  
+        </servlet-class>
+    </servlet>  
+    <servlet-mapping>  
+        <servlet-name>IJaxWS</servlet-name>  
+        <url-pattern>/services/IJaxWS</url-pattern>  
+    </servlet-mapping>
+    <!-- 添加JAX-WS发布至Web容器 end -->
 </web-app>
