@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceGroup>
+	<service name = "axis2WS">  
+	    <!-- 对当前webservice的描述 -->  
+	    <description>  
+	        	使用AXIS2来实现webservice  
+	    </description>        
+	    <!-- 设置webservice对应的类名，每个parameter有一个强制的属性(name)和一个可选的属性(locked),locked属性表示是否允许parameter的值被层次中的另一个子结点覆盖 -->  
+	    <parameter name = "ServiceClass">  
+	        com.qiutt.webservice.axis2.server.Axis2WS
+	    </parameter>  
+	    <messageReceivers>  
+	       <!-- axis2的版本 1.7以下
+	       		<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"  
+	            class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />  
+	        <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"  
+	            class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" /> -->  
+	        <!-- axis2的版本 1.7以上的使用 -->
+	        <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out"  
+	            class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />  
+	        <messageReceiver mep="http://www.w3.org/ns/wsdl/in-only"  
+	            class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+	    </messageReceivers>  
+	</service>  
+</serviceGroup>
