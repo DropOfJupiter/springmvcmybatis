@@ -34,7 +34,7 @@ public class Axis2WSClientByRpc {
 		try {
 			Object[] response = serviceClient.invokeBlocking(opName, parameters,returnTypes);
 			String result=(String) response[0];
-			System.out.println(result); 
+			System.out.println("使用RPC方式调用AXIS2发布的webservice返回的结果是："+result); 
 			
 		} catch (AxisFault e) {
 			// TODO Auto-generated catch block
