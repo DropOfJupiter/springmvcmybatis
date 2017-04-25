@@ -10,7 +10,12 @@
        http://www.springframework.org/schema/mvc 
        http://www.springframework.org/schema/mvc/spring-mvc.xsd"
        default-lazy-init="true">
-       	
+       	<!-- 启用spring mvc 注解 -->
+    	<context:annotation-config />
+    	<!-- 完成请求和注解方法的映射 -->
+    	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+    	<!-- 完成请求和注解POJO的映射 -->
+    	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
        	<!-- 指定静态资源路径 -->
        	<mvc:resources location="/WEB-INF/pages/" mapping="/pages/**"/>
        	<!-- 视图解析器 -->
